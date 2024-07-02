@@ -1,0 +1,23 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+    PERSONAS
+{% endblock %}
+
+
+{% block content %}
+    <!--LISTADO DE PERSONAS EN BRUTO-->
+    {{personas}}
+
+    <!--BUCLE SOBRE EL ARRAY PERSONAS-->
+    {% for persona in personas %}
+        <li> {{persona}}</li>
+    {% endfor %}
+
+    <!--BUCLE EN EL DICCIONARIO DE PERSONAS-->
+    {% for persona_dict in diccionario_personas %}
+        <li>Nombre: {{persona_dict.nombre}} - Edad: {{persona_dict.edad}}</li>
+    {% endfor %}
+
+
+{% endblock %}
